@@ -8,7 +8,7 @@ from root.settings import MEDIA_URL, MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('job_cards', include('apps.job_cards.urls')),
-    # path('blogs/', include('apps.blogs.urls')),
+    path('team_list/', include('apps.team_list.urls')),
     # path('crud/', include('apps.crud.urls')),
 
 

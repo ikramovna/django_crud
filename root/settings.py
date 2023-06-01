@@ -15,7 +15,7 @@ ALLOWED_HOSTS = ['*']
 
 MY_APPS = [
     'apps.job_cards',
-    # 'apps.blogs',
+    'apps.team_list',
     # 'apps.crud',
 ]
 
