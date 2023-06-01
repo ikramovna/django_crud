@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope="" itemtype="http://schema.org/WebSite">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title itemprop="name">Preview Bootstrap snippets. top customers list</title>
+    <meta name="description" itemprop="description"
+          content="Preview Bootstrap snippets. top customers list. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="keywords"
+          content="html, css, javascript, themes, templates, code snippets, ui examples, react js, react-native, plagraounds, cards, front-end, profile, invoice, back-end, web-designers, web-developers">
+    <link itemprop="sameAs" href="https://www.facebook.com/bootdey">
+    <link itemprop="sameAs" href="https://twitter.com/bootdey">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/bootdey_favicon.ico">
+    <link rel="apple-touch-icon" sizes="135x140" href="/img/bootdey_135x140.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/bootdey_76x76.png">
+    <link rel="canonical" href="https://bootdey.com/snippets/view/top-customers-list" itemprop="url">
+    <meta property="twitter:account_id" content="2433978487"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bootdey">
+    <meta name="twitter:creator" content="@bootdey">
+    <meta name="twitter:title" content="Preview Bootstrap  snippets. top customers list">
+    <meta name="twitter:description"
+          content="Preview Bootstrap snippets. top customers list. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="twitter:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-1363.png">
+    <meta name="twitter:url" content="https://bootdey.com/snippets/preview/top-customers-list">
+    <meta property="og:title" content="Preview Bootstrap  snippets. top customers list">
+    <meta property="og:url" content="https://bootdey.com/snippets/preview/top-customers-list">
+    <meta property="og:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-1363.png">
+    <meta property="og:description"
+          content="Preview Bootstrap snippets. top customers list. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="msvalidate.01" content="23285BE3183727A550D31CAE95A790AB"/>
+</head>
+<body>
+<div id="snippetContent">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 mb-3 mb-lg-5">
+                <div class="card">
+                    <div class="d-flex card-header justify-content-between">
+                        <h5 class="me-3 mb-0">Top Customers</h5>
+                        <a href="#!.html"></a></div>
+                    <a href="{% url 'add' %}" class="btn btn-link">Add user</a>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {% for user in users %}
+
+                                <li class="list-group-item pt-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0 me-3"><img
+                                                src="{{ user.image.url }}" alt=""
+                                                class="avatar rounded-circle"/></div>
+                                        <div class="flex-grow-1"><h6 class="mb-0">{{ user.name }}</h6>
+                                            <p class="mb-0 text-muted">{{ user.city }}</p></div>
+                                        <div class="flex-shrink-0 text-end"><span>{{ user.salary }}</span></div>
+
+                                        <a href="{% url 'update' pk=user.id %}">
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                        </a>
+
+                                        <a href="{% url 'delete' pk=user.id %}">
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">body {
+        margin-top: 20px;
+        background: #EDF1F9;
+    }
+
+    .card {
+        box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    }
+
+    .avatar {
+        width: 3rem;
+        height: 3rem;
+        font-size: .765625rem;
+    }
+
+    a {
+        text-decoration: none;
+    }</style>
+    <script type="text/javascript"></script>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1RTS0P1CD"></script>
+<script>window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-F1RTS0P1CD');</script>
+</body>
+</html>
