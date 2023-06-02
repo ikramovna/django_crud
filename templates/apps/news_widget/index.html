@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope="" itemtype="http://schema.org/WebSite">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title itemprop="name">Preview Bootstrap snippets. news widget</title>
+    <meta name="description" itemprop="description"
+          content="Preview Bootstrap snippets. news widget. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="keywords"
+          content="html, css, javascript, themes, templates, code snippets, ui examples, react js, react-native, plagraounds, cards, front-end, profile, invoice, back-end, web-designers, web-developers">
+    <link itemprop="sameAs" href="https://www.facebook.com/bootdey">
+    <link itemprop="sameAs" href="https://twitter.com/bootdey">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/bootdey_favicon.ico">
+    <link rel="apple-touch-icon" sizes="135x140" href="/img/bootdey_135x140.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/bootdey_76x76.png">
+    <link rel="canonical" href="https://bootdey.com/snippets/view/news-widget" itemprop="url">
+    <meta property="twitter:account_id" content="2433978487"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bootdey">
+    <meta name="twitter:creator" content="@bootdey">
+    <meta name="twitter:title" content="Preview Bootstrap  snippets. news widget">
+    <meta name="twitter:description"
+          content="Preview Bootstrap snippets. news widget. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="twitter:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-343.png">
+    <meta name="twitter:url" content="https://bootdey.com/snippets/preview/news-widget">
+    <meta property="og:title" content="Preview Bootstrap  snippets. news widget">
+    <meta property="og:url" content="https://bootdey.com/snippets/preview/news-widget">
+    <meta property="og:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-343.png">
+    <meta property="og:description"
+          content="Preview Bootstrap snippets. news widget. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="msvalidate.01" content="23285BE3183727A550D31CAE95A790AB"/>
+    <script src="/cache-js/cache-1635427806-97135bbb13d92c11d6b2a92f6a36685a.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="snippetContent">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type='text/javascript'
+            src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <div id="rs-team" class="rs-team fullwidth-team pt-100 pb-70">
+        <div class="container">
+            <a href="{% url 'add' %}" class="btn btn-secondary" style="margin-bottom: 1rem">Add user</a>
+            <div class="row">
+
+                {#    <a href="{% url 'add' %}" class="btn btn-secondary" style="margin-bottom: 1rem">Add user</a>#}
+                <div class="container bootstrap snippets bootdey">
+                    {% for user in users %}
+                        <div class="col-sm-4">
+                            <div class="widget single-news">
+                                <div class="image">
+                                    <img src="{{ user.image.url }}"
+                                         class="img-responsive"> <span class="gradient"></span></div>
+                                <div class="details">
+                                    <div class="category"><a href="">News</a></div>
+                                    <h3><a href="">{{ user.new|truncatechars:35 }}</a></h3>
+                                    <time>{{ user.date }}</time>
+                                    <a href="{% url 'update' user.id %}">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </a>
+                                    <a href="{% url 'delete' user.id %}">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+
+
+                <style type="text/css">body {
+                    margin-top: 20px;
+                    background-color: #eee;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+
+                .widget.single-news {
+                    margin-bottom: 20px;
+                    position: relative;
+                }
+
+                .widget.single-news .image img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .widget.single-news .image .gradient {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…IxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjbGVzc2hhdC1nZW5lcmF0ZWQpIiAvPjwvc3ZnPg==);
+                    background-image: -webkit-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0.05) 100%);
+                    background-image: -moz-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0.05) 100%);
+                    background-image: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0.05) 100%);
+                    background-image: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.05) 100%);
+                }
+
+                .widget.single-news .details {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 20px;
+                }
+
+                .widget.single-news .details .category {
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+
+                .widget.single-news .details .category a {
+                    color: #fff;
+                    zoom: 1;
+                    -webkit-opacity: 0.5;
+                    -moz-opacity: 0.5;
+                    opacity: 0.5;
+                    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+                    filter: alpha(opacity=50);
+                }
+
+                .widget.single-news .details h3 {
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 10px;
+                    font-size: 19px;
+                }
+
+                .widget.single-news .details h3 a {
+                    color: #fff;
+                    zoom: 1;
+                    -webkit-opacity: 0.8;
+                    -moz-opacity: 0.8;
+                    opacity: 0.8;
+                    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+                    filter: alpha(opacity=80);
+                }
+
+                .widget.single-news .details:hover time {
+                    position: relative;
+                    display: block;
+                    color: #fff;
+                    font-size: 13px;
+                    margin-bottom: -20px;
+                    -webkit-transition: all 350ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                    -moz-transition: all 350ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                    -o-transition: all 350ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                    transition: all 350ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+                    zoom: 1;
+                    -webkit-opacity: 0;
+                    -moz-opacity: 0;
+                    opacity: 0;
+                    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+                    filter: alpha(opacity=0);
+                }</style>
+                <script type="text/javascript"></script>
+            </div>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1RTS0P1CD"></script>
+            <script>window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-F1RTS0P1CD');</script>
+</body>
+</html>

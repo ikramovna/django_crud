@@ -17,6 +17,7 @@ MY_APPS = [
     'apps.job_cards',
     'apps.team_list',
     'apps.customers_list',
+    'news_wdj',
 ]
 
 THIRD_PARTY_APPS = [
