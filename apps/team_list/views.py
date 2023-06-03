@@ -1,38 +1,31 @@
-from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from apps.team_list.forms import UserForm
-from apps.team_list.models import User
-
-
-def home(request):
-    user = User.objects.all()
-    context = {
-        'users': user
-    }
-    return render(request, 'apps/team_list/index.html', context)
+from apps.job_categories.forms import UserForm
+from apps.job_categories.models import User
 
 
-def add_person(request):
-    if request.method == "POST":
-        form = UserForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-        return redirect('home')
-    return render(request, 'apps/team_list/add.html')
+class HomeListView(ListView):
+    queryset = User.objects.all()
+    template_name = 'apps/team_list/index.html'
+    context_object_name = 'users'
 
 
-def update_person(request, pk):
-    user = User.objects.get(id=pk)
-    if request.method == 'POST':
-        form = UserForm(request.POST, request.FILES, instance=user)
-        if form.is_valid():
-            form.save()
-        return redirect('home')
-    context = {'user': user}
-    return render(request, 'apps/team_list/edit.html', context)
+class AddPersonView(CreateView):
+    form_class = UserForm
+    queryset = User.objects.all()
+    success_url = reverse_lazy('home')
+    template_name = 'apps/team_list/add.html'
 
 
-def delete_person(request, pk):
-    user = User.objects.filter(id=pk)
-    user.delete()
-    return redirect('/')
+class UpdatePersonView(UpdateView):
+    queryset = User.objects.all()
+    form_class = UserForm
+    success_url = reverse_lazy('home')
+    template_name = 'apps/team_list/edit.html'
+
+
+class DeletePersonView(DeleteView):
+    queryset = User.objects.all()
+    success_url = reverse_lazy('home')
+    template_name = 'apps/team_list/delete.html'
