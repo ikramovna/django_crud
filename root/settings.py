@@ -20,6 +20,8 @@ MY_APPS = [
     'apps.news',
     'apps.card_location',
     'apps.job_categories',
+    'apps.card_block',
+
 
 ]
 
