@@ -57,23 +57,41 @@
                             <div class="card-body"><h3 class="h6 mb-4">Contact</h3>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="mb-3"><label class="form-label">Fullname</label> <input type="text"
-                                                                                                            name="name"
-                                                                                                            value="{{ user.name }}"
-                                                                                                            class="form-control">
-
+                                        <div class="mb-3"><label class="form-label">Description</label> <input
+                                                type="text"
+                                                name="description"
+                                                value="{{ user.description }}"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3"><label class="form-label">Price</label> <input type="text"
+                                                                                                         name="price"
+                                                                                                         value="{{ user.price }}"
+                                                                                                         class="form-control">
                                         </div>
                                         <div class="col-lg-6">
-                                            <div class="mb-3"><label class="form-label">Job</label> <input type="text"
-                                                                                                           name="job"
-                                                                                                           value="{{ user.job }}"
-                                                                                                           class="form-control">
+                                            <div class="mb-3"><label class="form-label">Discount</label> <input
+                                                    type="text"
+                                                    name="discount"
+                                                    value="{{ user.discount }}"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
-                                            <div class="mb-3">
-                                                <label class="form-label"></label>
-                                                <input type="file" name="image" class="form-control">
+                                            <div class="mb-3"><label class="form-label">Percent discount</label> <input
+                                                    type="text"
+                                                    name="percent"
+                                                    value="{{ user.percent }}"
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-3"><label class="form-label"></label> <input type="file"
+                                                                                                        name="image"
+                                                                                                        value="{{ user.image }}"
+                                                                                                        class="form-control">
                                             </div>
                                         </div>
                                         <button class="btn btn-primary" type="submit">Save</button>
