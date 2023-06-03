@@ -19,6 +19,7 @@ MY_APPS = [
     'apps.customers_list',
     'apps.news',
     'apps.card_location',
+    'apps.job_categories',
 
 ]
 
