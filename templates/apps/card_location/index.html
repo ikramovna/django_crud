@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope="" itemtype="http://schema.org/WebSite">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title itemprop="name">Preview Bootstrap snippets. card with join and location</title>
+    <meta name="description" itemprop="description"
+          content="Preview Bootstrap snippets. card with join and location. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="keywords"
+          content="html, css, javascript, themes, templates, code snippets, ui examples, react js, react-native, plagraounds, cards, front-end, profile, invoice, back-end, web-designers, web-developers">
+    <link itemprop="sameAs" href="https://www.facebook.com/bootdey">
+    <link itemprop="sameAs" href="https://twitter.com/bootdey">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/bootdey_favicon.ico">
+    <link rel="apple-touch-icon" sizes="135x140" href="/img/bootdey_135x140.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/bootdey_76x76.png">
+    <link rel="canonical" href="https://bootdey.com/snippets/view/card-with-join-and-location" itemprop="url">
+    <meta property="twitter:account_id" content="2433978487"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bootdey">
+    <meta name="twitter:creator" content="@bootdey">
+    <meta name="twitter:title" content="Preview Bootstrap  snippets. card with join and location">
+    <meta name="twitter:description"
+          content="Preview Bootstrap snippets. card with join and location. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="twitter:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-1359.png">
+    <meta name="twitter:url" content="https://bootdey.com/snippets/preview/card-with-join-and-location">
+    <meta property="og:title" content="Preview Bootstrap  snippets. card with join and location">
+    <meta property="og:url" content="https://bootdey.com/snippets/preview/card-with-join-and-location">
+    <meta property="og:image" content="https://bootdey.com/files/SnippetsImages/bootstrap-snippets-1359.png">
+    <meta property="og:description"
+          content="Preview Bootstrap snippets. card with join and location. Copy and paste the html, css and js code for save time, build your app faster and responsive">
+    <meta name="msvalidate.01" content="23285BE3183727A550D31CAE95A790AB"/>
+</head>
+<body>
+<div id="snippetContent">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <a href="{% url 'add' %}" class="btn btn-primary">Add user</a>
+        <div class="row">
+            {% for user in users %}
+                <div class="col-xl-4 col-md-4 mb-3 mb-lg-5">
+                    <div class="card overflow-hidden text-center"><img
+                            src="https://www.bootdey.com/image/280x120/FFB6C1/000000" class="card-img-top img-fluid"
+                            alt="">
+                        <div class="card-body p-0">
+                            <a href="#!.html"
+                               class="avatar xl rounded-circle bg-gray bg-opacity-10 p-1 position-relative mt-n5 d-block mx-auto">
+                                <img src="{{ user.image.url }}"
+                                     class="avatar-img img-fluid rounded-circle" alt=""> </a><h5 class="mb-0 pt-3"><a
+                                href="#!.html" class="text-reset">{{ user.name }}</a></h5> <span
+                                class="text-muted small d-block mb-4">{{ user.job }}</span>
+                            <div class="row mx-0 border-top border-bottom">
+                                <div class="col-6 text-center border-end py-3"><h5 class="mb-0">2345</h5> <small
+                                        class="text-muted">Followers</small></div>
+                                <div class="col-6 text-center py-3"><h5 class="mb-0">54</h5> <small class="text-muted">Following</small>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-3 d-flex align-items-center justify-content-between"><span
+                                        class="text-muted small">Location</span> <strong>{{ user.location }}</strong>
+
+                                <li>
+
+                                    <a href="{% url 'update' pk=user.id %}">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </a>
+                                    <a href="{% url 'delete' pk=user.id %}">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+    <style type="text/css">/*<![CDATA[*/
+    body {
+        margin-top: 20px;
+        background: #eee;
+    }
+
+    .avatar.xl {
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.09375rem;
+    }
+
+    .avatar img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .rounded-circle {
+        border-radius: 50% !important;
+    }
+
+    .rounded-circle {
+        border-radius: 50% !important;
+    }
+
+    .bg-opacity-10 {
+        --bs-bg-opacity: 0.1;
+    }
+
+    .bg-gray {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-gray-rgb), var(--bs-bg-opacity)) !important;
+    }
+
+    .p-1 {
+        padding: 0.25rem !important;
+    }
+
+    .mt-n5 {
+        margin-top: -1.5rem !important;
+    }
+
+    .mx-auto {
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .position-relative {
+        position: relative !important;
+    }
+
+    .d-block {
+        display: block !important;
+    }
+
+    a {
+        color: var(--bs-link-color);
+        text-decoration: none;
+    }
+
+    /*]]>*/</style>
+    <script type="text/javascript"></script>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1RTS0P1CD"></script>
+<script>window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-F1RTS0P1CD');</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
-from apps.news_wdj.forms import UserForm
-from apps.news_wdj.models import User
+from apps.news.forms import UserForm
+from apps.news.models import User
 
 
 def home(request):

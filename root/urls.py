@@ -10,7 +10,7 @@ urlpatterns = [
     path('job_cards', include('apps.job_cards.urls')),
     path('team_list/', include('apps.team_list.urls')),
     path('customers_list/', include('apps.customers_list.urls')),
-    path('news_wdj/', include('apps.news_wdj.urls')),
+    path('news/', include('apps.news.urls')),
 
 
 
