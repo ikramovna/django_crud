@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from apps.models import User
+from apps.contact_list.models import User
 
 
 class UserForm(ModelForm):

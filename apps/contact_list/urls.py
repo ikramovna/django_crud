@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.views import home, add_person, update_person, delete_person
+from apps.contact_list.views import home, add_person, update_person, delete_person
 
 urlpatterns = [
     path('', home, name='home'),
