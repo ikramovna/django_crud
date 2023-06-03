@@ -1,10 +1,10 @@
 from django.urls import path
 
-from apps.team_list.views import home, add_person, update_person, delete_person
+from apps.team_list.views import HomeListView, AddPersonView, UpdatePersonView, DeletePersonView
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('add', add_person, name='add'),
-    path('update/<int:pk>', update_person, name='update'),
-    path('delete/<int:pk>', delete_person, name='delete')
+    path('', HomeListView.as_view(), name='home'),
+    path('add', AddPersonView.as_view(), name='add'),
+    path('update/<int:pk>', UpdatePersonView.as_view(), name='update'),
+    path('delete/<int:pk>', DeletePersonView.as_view(), name='delete')
 ]
