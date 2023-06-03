@@ -14,6 +14,7 @@ urlpatterns = [
     path('card_location/', include('apps.card_location.urls')),
     path('job_categories/', include('apps.job_categories.urls')),
     path('card_block/', include('apps.card_block.urls')),
+    path('contact_list/', include('apps.contact_list.urls')),
 
 
 
