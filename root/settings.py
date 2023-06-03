@@ -22,6 +22,7 @@ MY_APPS = [
     'apps.job_categories',
     'apps.card_block',
     'apps.contact_list',
+    'apps.order_placed'
 
 
 ]

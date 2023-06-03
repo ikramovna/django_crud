@@ -1,4 +1,3 @@
-from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
@@ -15,6 +14,7 @@ urlpatterns = [
     path('job_categories/', include('apps.job_categories.urls')),
     path('card_block/', include('apps.card_block.urls')),
     path('contact_list/', include('apps.contact_list.urls')),
+    path('order_placed/', include('apps.order_placed.urls')),
 
 
 
