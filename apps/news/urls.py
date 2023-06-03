@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.news_wdj.views import home, add_person, update_person, delete_person
+from apps.news.views import home, add_person, update_person, delete_person
 
 urlpatterns = [
     path('', home, name='home'),
