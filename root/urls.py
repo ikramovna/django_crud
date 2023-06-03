@@ -15,6 +15,7 @@ urlpatterns = [
     path('card_block/', include('apps.card_block.urls')),
     path('contact_list/', include('apps.contact_list.urls')),
     path('order_placed/', include('apps.order_placed.urls')),
+    path('simple_job/', include('apps.simple_job.urls')),
 
 
 

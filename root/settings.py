@@ -22,13 +22,12 @@ MY_APPS = [
     'apps.job_categories',
     'apps.card_block',
     'apps.contact_list',
-    'apps.order_placed'
-
+    'apps.order_placed',
+    'apps.simple_job',
 
 ]
 
 THIRD_PARTY_APPS = [
-
 
 ]
 
@@ -108,17 +107,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-
-
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR / 'static')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'auth.User'
-
