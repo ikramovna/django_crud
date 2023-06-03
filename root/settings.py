@@ -18,6 +18,7 @@ MY_APPS = [
     'apps.team_list',
     'apps.customers_list',
     'apps.news',
+    'apps.card_location',
 
 ]
 

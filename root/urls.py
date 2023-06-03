@@ -11,6 +11,7 @@ urlpatterns = [
     path('team_list/', include('apps.team_list.urls')),
     path('customers_list/', include('apps.customers_list.urls')),
     path('news/', include('apps.news.urls')),
+    path('card_location/', include('apps.card_location.urls')),
 
 
 
